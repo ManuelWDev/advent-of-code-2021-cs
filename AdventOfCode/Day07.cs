@@ -36,7 +36,7 @@ public class Day07 : BaseDay {
     private static int CalculateLocationWithMinimumDistance(int[] positions, Func<int, int> distanceCostFunction) {
         var min = positions[0];
         var max = positions[^1];
-        var minDistance = GetDistance(positions, min, distanceCostFunction);
+        var minDistance = int.MaxValue;
 
         for (int i = min; i <= max; i++) {
             var distance = GetDistance(positions, i, distanceCostFunction);
